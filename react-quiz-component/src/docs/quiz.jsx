@@ -12,8 +12,7 @@ const quiz = {
   questions: [
     {
       question: 'How can you access the state of a component from inside of a member function?',
-      questionPic: 'https://dummyimage.com/600x400/000/fff&text=X',
-      questionAudio: 'https://dummyimage.com/600x400/000/fff&text=X',
+      questionAudio: "https://firebasestorage.googleapis.com/v0/b/quizapp-e39aa.appspot.com/o/1-MB-MP3.mp3?alt=media&token=4869a439-db97-4789-83be-6bdda9bdd9a3",
       questionType: 'text',
       answerSelectionType: 'single',
       answers: [

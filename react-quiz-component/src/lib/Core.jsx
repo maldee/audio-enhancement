@@ -233,13 +233,14 @@ function Core({
           {question.questionPic && (
             <img src={question.questionPic} alt="question" />
           )}
-          {question.questionAudio && (
-            <audio controls autoplay>
-              <source src={question.questionAudio} type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-
-          )}
+          <div className="player">
+            {question.questionAudio && (
+              <audio controls autoplay>
+                <source src={question.questionAudio} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            )}
+          </div>
           {renderTags(
             answerSelectionType,
             question.correctAnswer.length,
@@ -310,8 +311,8 @@ function Core({
               type="button"
               disabled={answerButtons[index].disabled || false}
               className={`${answerButtons[index].className} answerBtn btn ${isCorrectCheck(index + 1, correctAnswer) && showInstantFeedback
-                  ? 'correct'
-                  : ''
+                ? 'correct'
+                : ''
                 }`}
               onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onClickAnswer(index))}
             >
@@ -456,13 +457,14 @@ function Core({
               {activeQuestion && activeQuestion.questionPic && (
                 <img src={activeQuestion.questionPic} alt="question" />
               )}
-              {activeQuestion && activeQuestion.questionAudio && (
-                <audio controls autoplay>
-                <source src={activeQuestion.questionAudio} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-  
-              )}
+              <div className="player">
+                {activeQuestion && activeQuestion.questionAudio && (
+                  <audio controls autoplay>
+                    <source src={activeQuestion.questionAudio} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                )}
+              </div>
               {activeQuestion
                 && renderTags(
                   answerSelectionTypeState,

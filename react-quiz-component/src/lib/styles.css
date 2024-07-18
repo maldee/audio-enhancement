@@ -41,6 +41,14 @@
   color: white;
 }
 
+.react-quiz-container .player{
+  margin: 20px;
+}
+
+.react-quiz-container .player{
+  margin: 20px;
+}
+
 .timerBtn {
   background: green;
   border: 0 !important;
